@@ -38,7 +38,7 @@ public class DataBase {
     }
 
     void select_PERSONAS() {
-        String SQL = "SELECT * FROM prueba";
+        String SQL = "SELECT * FROM PEOPLE";
         try {
             Statement statement = this.connection.createStatement();
             ResultSet resultset = statement.executeQuery(SQL);
@@ -58,7 +58,7 @@ public class DataBase {
     }
 
     void insert_PERSONAS(People people) {
-        String SQL = "INSERT INTO PRUEBA (NAME, APELLIDOS, DEPARTAMENTO) VALUES(?,?,?)";
+        String SQL = "INSERT INTO PEOPLE (NAME, APELLIDOS, DEPARTAMENTO) VALUES(?,?,?)";
         
         try {
             PreparedStatement preparedstatement = this.connection.prepareStatement(SQL);
